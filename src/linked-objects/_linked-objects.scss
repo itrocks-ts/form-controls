@@ -5,9 +5,12 @@ form ul.object.properties > li,
 		background: #f8f8f8;
 		border: 1px solid #ddd;
 		border-radius: 4px;
+		box-sizing: border-box;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 3px;
+		inline-size: fit-content;
+		max-inline-size: 100%;
 		padding: 3px;
 
 		> li {
