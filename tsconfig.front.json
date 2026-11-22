@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"outDir": "browser",
+		"rootDir": "src",
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "es2022"
+	},
+	"include": ["src/**/build.ts", "src/object/autocomplete.ts"]
+}

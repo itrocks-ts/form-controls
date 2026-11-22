@@ -1,0 +1,63 @@
+{
+	"author": {
+		"name": "Baptiste Pillot",
+		"email": "baptiste@pillot.fr"
+	},
+	"dependencies": {
+		"@itrocks/air-datepicker": "latest",
+		"@itrocks/asset-loader": "latest",
+		"@itrocks/autocomplete": "latest",
+		"@itrocks/build": "latest",
+		"@itrocks/class-type": "latest",
+		"@itrocks/contained-auto-width": "latest",
+		"@itrocks/links": "latest",
+		"@itrocks/property-view": "latest",
+		"@itrocks/rename": "latest",
+		"@itrocks/transformer": "latest",
+		"@itrocks/translate": "latest"
+	},
+	"description": "Reusable HTML form controls for it.rocks property editors",
+	"devDependencies": {
+		"sass": "^1.95",
+		"typescript": "^7.0"
+	},
+	"engines": {
+		"node": ">=24"
+	},
+	"exports": {
+		".": "./cjs/form-controls.js",
+		"./browser/build.js": "./browser/build.js",
+		"./css/form-controls.css": "./css/form-controls.css"
+	},
+	"files": [
+		"LICENSE",
+		"README.md",
+		"browser",
+		"cjs",
+		"css",
+		"!*.map"
+	],
+	"homepage": "https://it.rocks",
+	"keywords": [
+		"backend",
+		"control",
+		"edit",
+		"field",
+		"form",
+		"front-end",
+		"html",
+		"it.rocks",
+		"property"
+	],
+	"license": "ISC",
+	"name": "@itrocks/form-controls",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itrocks-ts/form-controls.git"
+	},
+	"scripts": {
+		"build": "tsc && tsc -p tsconfig.front.json && sass --no-source-map src/form-controls.scss css/form-controls.css && node -e \"require('node:fs').copyFileSync('src/object/add.svg','css/add.svg')\"",
+		"test": "npm run build && node --test --test-isolation=none test/*.test.js"
+	},
+	"version": "0.0.1"
+}

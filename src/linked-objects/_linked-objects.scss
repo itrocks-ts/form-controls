@@ -1,0 +1,34 @@
+form ul.object.properties > li,
+.form-control,
+.property {
+	> ul[data-type=objects] {
+		background: #f8f8f8;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3px;
+		padding: 3px;
+
+		> li {
+			display: inline-block;
+			padding: 3px 8px;
+			position: relative;
+			white-space: pre;
+
+			> .autocomplete {
+				left: 0;
+				padding-bottom: 2px;
+				padding-top: 2px;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			> .suggestions {
+				margin-left: -8px;
+				margin-top: 18px;
+			}
+		}
+	}
+}
