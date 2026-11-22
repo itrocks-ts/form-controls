@@ -6,7 +6,8 @@
 		"rootDir": "src",
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"types": ["node"]
 	},
 	"exclude": ["src/**/build.ts", "src/object/autocomplete.ts"],
 	"include": ["src"]

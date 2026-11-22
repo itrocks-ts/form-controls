@@ -1,5 +1,4 @@
 import { ObjectOrType } from '@itrocks/class-type'
-import { displayOf }    from '@itrocks/property-view'
 import { toCssId }      from '@itrocks/rename'
 import { toField }      from '@itrocks/rename'
 import { tr }           from '@itrocks/translate'
@@ -22,7 +21,16 @@ export type FieldDependencies = {
 	tr:          (text: string) => string
 }
 
-const fieldDependencies: FieldDependencies = { displayOf, fieldIdOf: toCssId, fieldNameOf: toField, tr }
+const fieldDependencies: FieldDependencies = {
+	displayOf: (target, property) => {
+		// Load property-view after the framework has composed reflection.
+		const { displayOf } = require('@itrocks/property-view') as typeof import('@itrocks/property-view')
+		return displayOf(target, property)
+	},
+	fieldIdOf:   toCssId,
+	fieldNameOf: toField,
+	tr
+}
 
 export function controlField<T extends object>(
 	target: ObjectOrType<T>, property: keyof T, scope?: ControlScope, depends: FieldDependencies = fieldDependencies

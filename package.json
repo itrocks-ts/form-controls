@@ -18,6 +18,7 @@
 	},
 	"description": "Reusable HTML form controls for it.rocks property editors",
 	"devDependencies": {
+		"@types/node": "^24.10",
 		"sass": "^1.95",
 		"typescript": "^7.0"
 	},
@@ -59,5 +60,5 @@
 		"build": "tsc && tsc -p tsconfig.front.json && sass --no-source-map src/form-controls.scss css/form-controls.css && node -e \"require('node:fs').copyFileSync('src/object/add.svg','css/add.svg')\"",
 		"test": "npm run build && node --test --test-isolation=none test/*.test.js"
 	},
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
