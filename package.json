@@ -57,8 +57,8 @@
 		"url": "git+https://github.com/itrocks-ts/form-controls.git"
 	},
 	"scripts": {
-		"build": "tsc && tsc -p tsconfig.front.json && sass --no-source-map src/form-controls.scss css/form-controls.css && node -e \"require('node:fs').copyFileSync('src/object/add.svg','css/add.svg')\"",
+		"build": "tsc && tsc -p tsconfig.front.json && sass --no-source-map src/form-controls.scss css/form-controls.css && node -e \"const fs=require('node:fs'); fs.copyFileSync('src/object/add.svg','css/add.svg'); fs.copyFileSync('src/plus.svg','css/plus.svg')\"",
 		"test": "npm run build && node --test --test-isolation=none test/*.test.js"
 	},
-	"version": "0.0.5"
+	"version": "0.0.6"
 }

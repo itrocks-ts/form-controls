@@ -27,27 +27,29 @@ form ul.object.properties > li,
 				&:placeholder-shown:not(:focus) {
 					text-align: center;
 
-					&::placeholder {
-						color: inherit;
-						font-size: 18px;
-						font-weight: 300;
-						opacity: 1;
+					@media (forced-colors: none) {
+						background-image: url('plus.svg');
+						background-position: center;
+						background-repeat: no-repeat;
+
+						&::placeholder {
+							opacity: 0;
+						}
 					}
 				}
 			}
 
 			> .autocomplete {
-				left: 0;
-				padding-bottom: 2px;
-				padding-top: 2px;
+				inset: 0;
+				line-height: inherit;
+				padding-block: 2px;
 				position: absolute;
-				top: 0;
 				width: 100%;
 			}
 
 			> .suggestions {
-				margin-left: -8px;
-				margin-top: 18px;
+				inset-block-start: 100%;
+				inset-inline-start: 0;
 			}
 		}
 	}
