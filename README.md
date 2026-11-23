@@ -55,4 +55,6 @@ The markup helpers accept a `ControlField` from `controlField`.
 
 A standalone template can include `@itrocks/form-controls/browser/build.js` as a module and
 `@itrocks/form-controls/css/form-controls.css` as a stylesheet. The browser module activates date pickers,
-autocomplete and linked inputs on initial and dynamically inserted controls.
+autocomplete and linked inputs on initial and dynamically inserted controls. Clicking a field label focuses the first
+editable control that follows it within the same container and selects its text when the control supports selection.
+Mark action controls with `data-form-action` to leave them out of this search.
