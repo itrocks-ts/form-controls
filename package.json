@@ -60,5 +60,5 @@
 		"build": "tsc && tsc -p tsconfig.front.json && sass --no-source-map src/form-controls.scss css/form-controls.css && node -e \"require('node:fs').copyFileSync('src/object/add.svg','css/add.svg')\"",
 		"test": "npm run build && node --test --test-isolation=none test/*.test.js"
 	},
-	"version": "0.0.4"
+	"version": "0.0.5"
 }

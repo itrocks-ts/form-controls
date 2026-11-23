@@ -19,6 +19,23 @@ form ul.object.properties > li,
 			position: relative;
 			white-space: pre;
 
+			> input[placeholder='+'] {
+				&:focus::placeholder {
+					opacity: 0;
+				}
+
+				&:placeholder-shown:not(:focus) {
+					text-align: center;
+
+					&::placeholder {
+						color: inherit;
+						font-size: 18px;
+						font-weight: 300;
+						opacity: 1;
+					}
+				}
+			}
+
 			> .autocomplete {
 				left: 0;
 				padding-bottom: 2px;
